@@ -15,9 +15,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{
-        display: 'grid',
-        gridTemplateColumns: '0.5fr 1fr 0.5fr',
-        gridTemplateRows: 'repeat(3, 100px)',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        
+        maxWidth: '1000px',
+        margin: '0 auto',
       }}>
         <Title />
         <SearchBar onSearchChange={hanldeOnChange} />
