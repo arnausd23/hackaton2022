@@ -9,7 +9,7 @@ import { ProductCard } from './components/ProductCard';
 import { useState } from 'react';
 
 function App() {
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState(['', ''])
   const hanldeOnChange = (e) => { console.log(e.target.value); }
 
   return (
@@ -17,7 +17,7 @@ function App() {
       <Box sx={{
         display: 'grid',
         gridTemplateColumns: '0.5fr 1fr 0.5fr',
-        gridTemplateRows: 'repeat(2, 1fr)'
+        gridTemplateRows: 'repeat(3, 100px)',
       }}>
         <Title />
         <SearchBar onSearchChange={hanldeOnChange} />

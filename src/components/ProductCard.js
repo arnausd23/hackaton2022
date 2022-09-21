@@ -40,7 +40,7 @@ const Product = ({ data }) => {
 export const ProductCard = ({ products }) => {
 
     return (
-        <Box sx={{ width: '100%' }}>
+        <Box sx={{ width: '100%', gridColumn: '2/3', gridRow: '3/3', display: 'flex' }}>
             <Stack spacing={2}>
                 {products.length > 0 && products.map(product => <Product data={product} />)}
             </Stack>
