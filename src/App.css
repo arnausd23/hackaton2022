@@ -37,12 +37,12 @@ button.search-button {
     border-left-width: 0;
 }
 
-<<<<<<< Updated upstream
 /* MODAL */
 div .MuiDialog-paper {
     background: none;
     box-shadow: none;
-=======
+}
+
 .bg-svg {
     height: calc(100vh - 87px);
 }
@@ -59,5 +59,4 @@ div .MuiDialog-paper {
     bottom: 0;
     width: 100vw;
     z-index: -1;
->>>>>>> Stashed changes
 }
