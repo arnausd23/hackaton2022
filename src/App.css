@@ -6,3 +6,33 @@ body {
     margin: 0;
     background-color: #002e47;
 }
+
+.TextField-border-radius {
+    width: 100%;
+    background-color: #fff;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+    border-right-width: 0;
+}
+
+.TextField-border-radius > div {
+    width: 100%;
+}
+
+.TextField-border-radius fieldset {
+    border: 0;
+}
+
+.TextField-border-radius input {
+    color: #607480;
+}
+
+.TextField-border-radius svg { 
+    fill: #1C6FD1
+}
+
+button.search-button {
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+    border-left-width: 0;
+}

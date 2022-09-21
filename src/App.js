@@ -17,6 +17,9 @@ function App() {
   const [products, setProducts] = useState([])
   const [query, setQuery] = useState(null)
 
+  const onTextFieldChange = (e) => {
+    setQuery(e.target.value)
+  }
   const hanldeOnChange = (query) => {
     setQuery(query)
   }
@@ -41,8 +44,9 @@ function App() {
         position: "absolute",
         bottom: 0,
         right: 0,
+        zIndex: -1
       }}>
-        <svg width="499" height="596" viewBox="0 0 499 596" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="649" height="746" viewBox="0 0 499 596" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path opacity="0.3" d="M498.832 0L294.849 0L107.252 595.566H498.832V0Z" fill="#044D80" />
           <g opacity="0.8">
             <path d="M490.023 310.209C490.315 310.209 490.6 310.125 490.843 309.966C491.086 309.807 491.275 309.582 491.387 309.318C491.499 309.054 491.528 308.764 491.471 308.484C491.414 308.204 491.273 307.947 491.067 307.745C490.86 307.543 490.597 307.406 490.311 307.35C490.025 307.295 489.728 307.323 489.458 307.432C489.188 307.542 488.958 307.727 488.796 307.964C488.633 308.201 488.547 308.48 488.547 308.766C488.547 309.149 488.702 309.516 488.979 309.787C489.256 310.057 489.632 310.209 490.023 310.209Z" fill="#044D80" />
@@ -174,7 +178,7 @@ function App() {
           <path opacity="0.3" d="M1.00004 595.566L48.0538 455.982L316.427 455.982L269.367 595.566" stroke="#044D80" stroke-width="2" />
         </svg>
       </Box>
-      
+
       <Box sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -188,7 +192,8 @@ function App() {
           value={query}
           isLoading={isLoading}
           onSubmit={submitQuery}
-          onSearchChange={hanldeOnChange} />
+          onTextFieldChange={onTextFieldChange}
+        />
 
         {products.length === 0 && (<DefaultCases onClickAtCase={(e) => {
           hanldeOnChange(e)

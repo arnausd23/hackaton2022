@@ -12,4 +12,13 @@ export const theme = createTheme({
             contrastText: '#002E47'
         },
     },
+    components: {
+        // Name of the component
+        TextField: {
+          defaultProps: {
+            // The props to change the default for.
+            color: 'red', // No more ripple, on the whole application 💣!
+          },
+        },
+      },
 });
