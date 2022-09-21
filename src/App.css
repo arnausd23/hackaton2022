@@ -7,6 +7,7 @@ body {
     background-color: #002e47;
 }
 
+/* Search Bar */
 .TextField-border-radius {
     width: 100%;
     background-color: #fff;
@@ -15,7 +16,7 @@ body {
     border-right-width: 0;
 }
 
-.TextField-border-radius > div {
+.TextField-border-radius>div {
     width: 100%;
 }
 
@@ -27,7 +28,7 @@ body {
     color: #607480;
 }
 
-.TextField-border-radius svg { 
+.TextField-border-radius svg {
     fill: #1C6FD1
 }
 
@@ -35,4 +36,10 @@ button.search-button {
     border-bottom-right-radius: 100px;
     border-top-right-radius: 100px;
     border-left-width: 0;
+}
+
+/* MODAL */
+div .MuiDialog-paper {
+    background: none;
+    box-shadow: none;
 }
