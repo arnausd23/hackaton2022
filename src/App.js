@@ -201,7 +201,7 @@ function App() {
           {products.length === 0 && (<DefaultCases onClickAtCase={(e) => {
             hanldeOnChange(e)
           }} />)}
-          <ProductCard products={products} />
+          <ProductCard products={products} category={category}/>
         </Box>
       </Box>
 
