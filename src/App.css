@@ -60,3 +60,8 @@ div .MuiDialog-paper {
     width: 100vw;
     z-index: -1;
 }
+
+/* Product */
+.product-card:hover {
+    transform: scale(1.01);
+}

@@ -18,7 +18,7 @@ const Product = ({ name, description, logo, itemid, itemslug }) => {
     }
 
     return (
-        <Item>
+        <Item className='product-card'>
             <Box
                 style={{
                     cursor: 'pointer'
