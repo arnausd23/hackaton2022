@@ -1,5 +1,5 @@
 
-const SERVER = 'http://localhost:8000'
+const SERVER = 'http://44.202.161.6:8000/'
 
 export const API = {
     query: async (query) => {
