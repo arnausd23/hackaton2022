@@ -2,6 +2,7 @@ import { createTheme } from '@mui/material/styles';
 
 export const orangeColor = '#FF6200'
 export const yellowColor = '#FF9D28'
+export const blueColor = '#93b4d8'
 
 export const theme = createTheme({
     palette: {

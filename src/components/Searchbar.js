@@ -9,7 +9,7 @@ export const SearchBar = ({ onTextFieldChange, onSubmit, isLoading, value }) => 
     }
 
     return (
-        <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: '80px' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: '80px', maxWidth: '800px' }}>
             <div className="TextField-border-radius">
                 <TextField variant="outlined" placeholder="What type of problem do you have?" value={value} onChange={e => onTextFieldChange(e)}
                     InputProps={{

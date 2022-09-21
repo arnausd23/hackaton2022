@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { Box, Stack } from '@mui/material';
 import Paper from '@mui/material/Paper';
+import { blueColor } from '../Theme';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -9,14 +10,14 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const Product = ({ name, description, logo, itemid, itemslug }) => {
-    
+
     const navigateToProduct = () => {
         window.location.href = `https://capterra.com/p/${itemid}/${itemslug}`
     }
 
     return (
         <Item>
-            <Box 
+            <Box
                 style={{
                     cursor: 'pointer'
                 }}
@@ -31,12 +32,13 @@ const Product = ({ name, description, logo, itemid, itemslug }) => {
                     loading="lazy"
                     style={{
                         maxWidth: "100px",
-                        height: "100%"
+                        height: "100%",
+                        border: `1px solid ${blueColor}`
                     }}
-                />
+                    />
                 <Box sx={{
                     textAlign: "left",
-                    marginLeft: "20px"
+                    marginLeft: "20px",
                 }}>
                     <h3>{name}</h3>
                     <p>{description}</p>
