@@ -1,24 +1,43 @@
-import logo from './logo.svg';
+import { ThemeProvider } from '@emotion/react';
+import { Box, Grid } from '@mui/material';
 import './App.css';
+import { theme } from './Theme';
+
+import { SearchBar } from './components/Searchbar';
+import { Title } from './components/Title';
+import { ProductCard } from './components/ProductCard';
+import { useState } from 'react';
 
 function App() {
+  const [products, setProducts] = useState([])
+  const hanldeOnChange = (e) => { console.log(e.target.value); }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Box sx={{ flexGrow: 1 }}>
+
+        <Grid container margin="0 auto">
+          <Grid item md={4} />
+          <Grid item xs={12} md={5}>
+            <Title />
+          </Grid>
+        </Grid>
+
+        <Grid container margin="36px auto">
+          <Grid item md={4} />
+          <Grid item xs={12} md={7}>
+            <SearchBar onSearchChange={hanldeOnChange}/>
+          </Grid>
+        </Grid>
+
+        <Grid container margin="0 auto">
+          <Grid item md={3} />
+          <Grid item xs={12} md={4}>
+            <ProductCard products={products}/>
+          </Grid>
+        </Grid>
+      </Box>
+    </ThemeProvider >
   );
 }
 
