@@ -4,13 +4,12 @@
 
 body {
     margin: 0;
-    background-color: #002e47;
 }
 
 /* Search Bar */
 .TextField-border-radius {
     width: 100%;
-    background-color: #fff;
+    background-color: #f7fafb;
     border-bottom-left-radius: 100px;
     border-top-left-radius: 100px;
     border-right-width: 0;
@@ -38,8 +37,27 @@ button.search-button {
     border-left-width: 0;
 }
 
+<<<<<<< Updated upstream
 /* MODAL */
 div .MuiDialog-paper {
     background: none;
     box-shadow: none;
+=======
+.bg-svg {
+    height: calc(100vh - 87px);
+}
+
+.bg-svg img {
+    height: calc(100vh - 87px);
+}
+
+.bg-color {
+    position: absolute;
+    height: calc(100vh - 87px);
+    background-color: #002e47;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: -1;
+>>>>>>> Stashed changes
 }

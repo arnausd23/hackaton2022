@@ -15,7 +15,7 @@ const someTexts = [
 
 export default function DefaultCases({onClickAtCase}) {
     return ( 
-        <Box sx={{ width: '800px'}}>
+        <Box sx={{ width: '600px'}}>
             <div
                 style={{
                     color: "#93B4D8",
@@ -38,12 +38,12 @@ export default function DefaultCases({onClickAtCase}) {
                             <div
                                  style={{
                                     color: "#F2F8FB",
-                                    fontSize: '22px',
+                                    fontSize: '16px',
                                     display: 'flex',
                                     flexDirection: 'row'
                                 }}
                             >
-                                <div style={{ marginRight: 12}}><SearchIcon /></div> <div style={{ paddingTop: '5px'}}>{`"${text}"`}</div></div>
+                                <div style={{ marginRight: 12}}><SearchIcon /></div> <div style={{ paddingTop: '4px'}}>{`"${text}"`}</div></div>
                         </ListItemButton>
                     </ListItem> 
                 ))}

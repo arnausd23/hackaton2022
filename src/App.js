@@ -10,7 +10,11 @@ import { useState } from 'react';
 import { API } from './api/api';
 import DefaultCases from './components/DefaultCases';
 import { Header } from './components/Header';
+<<<<<<< Updated upstream
 import { SimpleDialog } from './components/Dialog';
+=======
+import Bg from './components/Bg';
+>>>>>>> Stashed changes
 
 function App() {
   const [category, setCategory] = useState(null)
@@ -18,9 +22,6 @@ function App() {
   const [products, setProducts] = useState([])
   const [query, setQuery] = useState(null)
 
-  const onTextFieldChange = (e) => {
-    setQuery(e.target.value)
-  }
   const hanldeOnChange = (query) => {
     setQuery(query)
   }
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+<<<<<<< Updated upstream
       <Header />
       <Box sx={{ width: '600px', margin: '0 auto' }}>
 
@@ -186,6 +188,25 @@ function App() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
+=======
+      <Header/>      
+    
+      {products.length === 0 && (<Bg />)}
+      
+      <Box sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        maxWidth: '600px',
+        margin: '0 auto',
+      }}>
+        <Title />
+        <SearchBar
+          value={query}
+          isLoading={isLoading}
+          onSubmit={submitQuery}
+          onSearchChange={hanldeOnChange} />
+>>>>>>> Stashed changes
 
           maxWidth: '1000px',
           margin: '0 auto',
