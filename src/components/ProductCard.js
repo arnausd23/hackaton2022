@@ -13,7 +13,6 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const Product = ({ name, description, logo, itemid, itemslug }) => {
-
     const navigateToProduct = () => {
         window.location.href = `https://capterra.com/p/${itemid}/${itemslug}`
     }
@@ -29,16 +28,23 @@ const Product = ({ name, description, logo, itemid, itemslug }) => {
                     display: 'flex',
                     flexDirection: 'row',
                 }}>
-                <img
-                    src={logo}
-                    alt="Product image"
-                    loading="lazy"
-                    style={{
-                        maxWidth: "100px",
-                        height: "100%",
+                <Box
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        verticalAlign: 'center',
+                        justifyContent: 'center',
+                        height: "100px",
+                        width: "100px",
                         border: `1px solid ${blueColor}`
-                    }}
-                />
+                    }}>
+
+                    <img
+                        src={logo}
+                        alt="Product image"
+                        loading="lazy"
+                    />
+                </Box>
                 <Box sx={{
                     textAlign: "left",
                     marginLeft: "20px",
@@ -54,7 +60,7 @@ const Product = ({ name, description, logo, itemid, itemslug }) => {
 export const ProductCard = ({ products, category }) => {
     return (
         <Box>
-            {category && <Alert severity="info" sx={{marginBottom: '24px', boxShadow: '2px 2px 15px rgba(0, 46, 71, 0.1)',}}>You are seing this results because we matched <strong>{category}</strong></Alert>}
+            {category && <Alert severity="info" sx={{ marginBottom: '24px', boxShadow: '2px 2px 15px rgba(0, 46, 71, 0.1)', }}>You are seing this results because we matched <strong>{category}</strong></Alert>}
             <Box sx={{ width: '100%', gridColumn: '2/3', gridRow: '3/3', display: 'flex' }}>
                 <Stack spacing={2}>
                     {products.length > 0 && products.map(product => <Product logo={product.logo} itemid={product.itemid} itemslug={product.slug} name={product.name} description={product.description} />)}
