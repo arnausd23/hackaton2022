@@ -12,8 +12,6 @@ const someTexts = [
 ]
 
 export default function DefaultCases({onClickAtCase}) {
-
-
     return ( 
         <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
             <List>

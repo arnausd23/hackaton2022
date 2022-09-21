@@ -16,21 +16,20 @@ function App() {
   const [products, setProducts] = useState([])
   const [query, setQuery] = useState(null)
 
-  const hanldeOnChange = (e) => { 
-    setQuery(e.target.value)
-    console.log(e.target.value); 
+  const hanldeOnChange = (query) => {
+    setQuery(query)
   }
 
   const submitQuery = async () => {
-    console.log(query) 
+    console.log(query)
     setIsLoading(true)
     const response = await API.query(query)
-    
+
     setCategory(response.label)
     setProducts(response.products)
     console.log(response)
     setIsLoading(false)
-    
+
   }
 
 
@@ -53,7 +52,7 @@ function App() {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        
+
         maxWidth: '1000px',
         margin: '0 auto',
       }}>
@@ -62,14 +61,14 @@ function App() {
           value={query}
           isLoading={isLoading}
           onSubmit={submitQuery}
-        onSearchChange={hanldeOnChange} />
+          onSearchChange={hanldeOnChange} />
 
-        {products.length === 0 && (<DefaultCases onClickAtCase={(t) => {
-          setQuery(t, submitQuery)
-        }} />)} 
+        {products.length === 0 && (<DefaultCases onClickAtCase={(e) => {
+          hanldeOnChange(e)
+        }} />)}
 
         {category && (
-         <Chip label={`You are seing this results because we matched ${category}`} />
+          <Chip label={`You are seing this results because we matched ${category}`} />
         )}
         <ProductCard products={products} />
       </Box>
