@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@emotion/react';
-import { Box, Grid } from '@mui/material';
+import { Box } from '@mui/material';
 import './App.css';
 import { theme } from './Theme';
 
@@ -14,28 +14,14 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ flexGrow: 1 }}>
-
-        <Grid container margin="0 auto">
-          <Grid item md={4} />
-          <Grid item xs={12} md={5}>
-            <Title />
-          </Grid>
-        </Grid>
-
-        <Grid container margin="36px auto">
-          <Grid item md={4} />
-          <Grid item xs={12} md={7}>
-            <SearchBar onSearchChange={hanldeOnChange}/>
-          </Grid>
-        </Grid>
-
-        <Grid container margin="0 auto">
-          <Grid item md={3} />
-          <Grid item xs={12} md={4}>
-            <ProductCard products={products}/>
-          </Grid>
-        </Grid>
+      <Box sx={{
+        display: 'grid',
+        gridTemplateColumns: '0.5fr 1fr 0.5fr',
+        gridTemplateRows: 'repeat(2, 1fr)'
+      }}>
+        <Title />
+        <SearchBar onSearchChange={hanldeOnChange} />
+        <ProductCard products={products} />
       </Box>
     </ThemeProvider >
   );

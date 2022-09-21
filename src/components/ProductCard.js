@@ -8,7 +8,7 @@ const Item = styled(Paper)(({ theme }) => ({
     padding: '24px',
 }));
 
-const Product = ({data}) => {
+const Product = ({ data }) => {
     return (
         <Item>
             <Box sx={{
@@ -17,7 +17,7 @@ const Product = ({data}) => {
             }}>
                 <img
                     src={`https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1381&q=80`}
-                    alt=""
+                    alt="Product image"
                     loading="lazy"
                     style={{
                         maxWidth: "100px",
@@ -37,12 +37,12 @@ const Product = ({data}) => {
     )
 }
 
-export const ProductCard = ({products}) => {
+export const ProductCard = ({ products }) => {
 
     return (
         <Box sx={{ width: '100%' }}>
             <Stack spacing={2}>
-                {products.length > 0 && products.map(product => <Product data={product}/>)}
+                {products.length > 0 && products.map(product => <Product data={product} />)}
             </Stack>
         </Box>
     )
